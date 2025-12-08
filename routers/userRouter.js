@@ -5,7 +5,7 @@ const userRouter = express.Router();
 
 
 
- /**
+/**
  * @swagger
  * /loginUser:
  *   post:
@@ -28,7 +28,6 @@ const userRouter = express.Router();
  *       200:
  *         description: Login succesful
  */
-
 userRouter.post("/loginUser",  loginUser);
 userRouter.post("/registerUser", uploads.single("image"), registerUser);
 
