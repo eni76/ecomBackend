@@ -1,5 +1,5 @@
 const swaggerJsdoc = require("swagger-jsdoc");
-const swaggerUi = require("swagger-ui-express-0 ");
+const swaggerUi = require("swagger-ui-express");
 
 const options = {
     definition: {
@@ -11,15 +11,15 @@ const options = {
         },
         servers: [
             {
-                url: "http://ecombackend-ihay.onrender.com", // Change to your real server URL
+                url: "https://ecombackend-ihay.onrender.com", // Changed to https
             },
         ],
     },
 
     // Path where your route files are located
-    apis: ["./routes/*.js"],
+    apis: ["./routers/*.js"], // Fixed: was ./routes/*.js
 };
 
 const swaggerSpec = swaggerJsdoc(options);
 
-export { swaggerUi, swaggerSpec };
+module.exports = { swaggerUi, swaggerSpec };
