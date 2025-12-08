@@ -9,7 +9,7 @@ const userRouter = express.Router();
  * @swagger
  * /loginUser:
  *   post:
- *     summary: 
+ *     summary: User login
  *     tags:
  *       - User
  *     requestBody:
@@ -19,14 +19,13 @@ const userRouter = express.Router();
  *           schema:
  *             type: object
  *             properties:
- *               exampleField:
- *                  email:
+ *               email:
  *                 type: string
- *                  pasword:
- *                  type:string
+ *               password:
+ *                 type: string
  *     responses:
  *       200:
- *         description: Login succesful
+ *         description: Login successful
  */
 userRouter.post("/loginUser",  loginUser);
 userRouter.post("/registerUser", uploads.single("image"), registerUser);
