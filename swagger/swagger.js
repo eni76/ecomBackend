@@ -1,8 +1,8 @@
 
-import swaggerJsdoc from "swagger-jsdoc";
-import swaggerUi from "swagger-ui-express";
+const swaggerJsdoc = require("swagger-jsdoc");                                                                                                         ;
+const swaggerUi  = require( "swagger-ui-express-0 ");
 
-const options = {
+const options = {                                                                                                                                        
   definition: {
     openapi: "3.0.0",
     info: {
