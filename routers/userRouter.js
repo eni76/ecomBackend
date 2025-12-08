@@ -28,6 +28,53 @@ const userRouter = express.Router();
  *         description: Login successful
  */
 userRouter.post("/loginUser",  loginUser);
+/**
+ * @swagger
+ * /registerUser:
+ *   post:
+ *     summary: Register a new user
+ *     tags:
+ *       - User
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         multipart/form-data:
+ *           schema:
+ *             type: object
+ *             required:
+ *               - firstname
+ *               - lastname
+ *               - email
+ *               - phone
+ *               - address
+ *               - password
+ *               - confirmpassword
+ *             properties:
+ *               firstname:
+ *                 type: string
+ *               lastname:
+ *                 type: string
+ *               email:
+ *                 type: string
+ *               phone:
+ *                 type: string
+ *               address:
+ *                 type: string
+ *               password:
+ *                 type: string
+ *               confirmpassword:
+ *                 type: string
+ *               image:
+ *                 type: string
+ *                 format: binary
+ *     responses:
+ *       201:
+ *         description: User registered successfully
+ *       400:
+ *         description: Bad request
+ *       500:
+ *         description: Internal server error
+ */
 userRouter.post("/registerUser", uploads.single("image"), registerUser);
 
 module.exports = userRouter;
