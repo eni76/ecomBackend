@@ -10,17 +10,13 @@ const { swaggerUi, swaggerSpec } = require('./swagger/swagger')
 dotenv.config()
 const app = express()
 
-const corsOptions = {
-  origin: [
-    'http://localhost:5173',
-    'https://ecommerce-pink-rho-94.vercel.app'
-  ],
-  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
-}
-
-app.use(cors(corsOptions))
+app.use(
+  cors({
+    origin: ['http://localhost:5173', 'https://ecommerce-pink-rho-94.vercel.app'],
+    methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+    credentials: true 
+  })
+)
 
 
 
