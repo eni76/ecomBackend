@@ -63,6 +63,7 @@ model User {
   creatAt   DateTime @default(now())
   updatedAt DateTime @updatedAt
   firstname String
+  isVerified Boolean  @default(false)
   lastname  String
   password  String
   uuid      String   @unique @default(uuid()) @db.Uuid

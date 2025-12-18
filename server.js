@@ -12,7 +12,7 @@ const app = express()
 
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'https://ecommerce-flax-sigma.vercel.app'],
+    origin: ['http://localhost:5173', 'https://ecommerce-pink-rho-94.vercel.app'],
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     credentials: true 
   })
