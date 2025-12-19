@@ -12,12 +12,11 @@ const app = express()
 
 app.use(
   cors({
-    origin: ['http://localhost:5173', 'https://ecommerce-pink-rho-94.vercel.app'],
+    origin: ['http://localhost:5174', 'https://ecommerce-pink-rho-94.vercel.app'],
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
-    credentials: true 
+    credentials: true
   })
 )
-
 
 
 // app.use(express.json());
